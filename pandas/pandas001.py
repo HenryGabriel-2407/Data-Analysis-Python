@@ -12,13 +12,13 @@
 
 import pandas as pd
 
-data = pd.read_csv("water_use_data_2013_to_2022.csv")
+data = pd.read_csv("dataset\\water_use_data_2013_to_2022.csv")
 print(data.head(10))
 print("\n\n")
-print(data.info())
+print(data.info()) # Mostra o tipo de dado de cada coluna e a quantidade de dados faltantes
 print("\n\n")
 print(type(data))
-print(f"\n{data.shape}\n") #retorna a dimensão da tabela
+print(f"\n{data.shape}\n") #retorna as dimensões da tabela
 
 print(f"{data.columns}\n") #retorna os metadados
 print(f"{list(data.columns)}\n")
@@ -26,3 +26,6 @@ print(f"{list(data.columns)}\n")
 ajustes = data.rename(columns={'industry':'industria', 'year':'ano'}) #,inplace=True ->para modificar permanentemente
 #ou pode renomer todas as colunas através de uma lista do mesmo tamanho data.columns = ['aaa', 'bbb',...., 'ccc']
 print(f"{list(ajustes)}")
+
+data.columns = ['Index', 'PAÍS', 'GALLONS_FROM_GREAT_LAKES', 'GALLONS_FROM_GROUNDWATER', 'GALLONS_FROM_INLAND_SURFACE', 'TOTAL_GALLONS_SOURCES', 'INDUSTRIA', 'ANO']
+print(f"{data}")

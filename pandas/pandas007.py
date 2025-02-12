@@ -13,6 +13,11 @@ lista_ano = ['2011', '2014', '2017']
 print(data.query('Year in @lista_ano'))
 print("\n\n")
 
+lista_ano = ['2012', '2015', '2017']
+selecao = data['Year'].isin(lista_ano)
+print(data[selecao].head())
+print("\n\n")
+
 for index, row in data.head(10).iterrows():
     print(f'{index} --> {row["Region"]} - {row["Country"]}')
 

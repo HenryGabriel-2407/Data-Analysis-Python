@@ -1,19 +1,11 @@
 import pandas as pd
 
-data = pd.read_csv("C:\\Users\\Usuário\\Desktop\\Pastando\\Python\\Análise de Dados\\dataset\\results.csv")
+data = pd.read_csv("dataset\\Footbal\\results.csv")
 
-print(f"{data.head(10)}\n\n")
+print(f"{data.head(10)}\n\n") # 10 primeiros registros da tabela
 
-coluna_country = data['country']
-quantidade_inglaterra = 0
-quantidade_brasil = 0
-for pais in coluna_country:
-    if pais == 'England':
-        quantidade_inglaterra += 1
-    elif pais == 'Brazil':
-        quantidade_brasil += 1
-    else: 
-        continue
+quantidade_inglaterra = data['country'].value_counts().get('England', 0)
+quantidade_brasil = data['country'].value_counts().get('Brazil', 0)
 
 print(f"A quantidade de jogos realizados na Inglaterra foram de {quantidade_inglaterra} vezes")
 print(f"A quantidade de jogos realizados no Brasil foram de {quantidade_brasil} vezes\n")

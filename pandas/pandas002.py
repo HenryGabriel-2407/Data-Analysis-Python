@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv("C:\\Users\\Usuário\\Desktop\\Pastando\\Python\\Análise de Dados\\dataset\\water_use_data_2013_to_2022.csv")
+data = pd.read_csv("dataset\\water_use_data_2013_to_2022.csv")
 
 print(f"{data['year']}\n")
 

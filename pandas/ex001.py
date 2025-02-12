@@ -1,8 +1,9 @@
-import pandas as pd
+import pandas as pd #importando a biblioteca
 
-tabela = pd.read_excel("Vendas.xlsx")
+tabela = pd.read_excel("dataset\\Vendas.xlsx") # importanto a tabela
 print(tabela)
-faturamento_total = tabela["Valor Final"].sum()
+
+faturamento_total = tabela["Valor Final"].sum() # soma de todos os valores da coluna "Valor Final"
 print(f"\n\nO Faturamento da empresa foi de R${faturamento_total}\n")
 
 #faturamento por loja

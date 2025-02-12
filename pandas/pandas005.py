@@ -1,11 +1,11 @@
 import pandas as pd
 
-data = pd.read_csv("C:\\Users\\Usuário\\Desktop\\Pastando\\Python\\Análise de Dados\\dataset\\results.csv")
+data = pd.read_csv("dataset\\Footbal\\results.csv")
 
 print(f"{data.head()}\n")
 print(f"{data.iloc[[1, 374, 4583], 6]}\n")
 print(f"{data.iloc[342, 7]}\n")
-print(f"{data.loc[123:132, ['city','country']]}\n")
+print(f"{data.loc[123:132, ['city','country']]}\n") 
 del data['date']
 print(f"{data.head()}\n")
 # data.to_csv("novo_nome_do_arquivo", index=False) serve para salvar as modificações, e index=False serve para 'eliminar' os indices na hora de salvar
